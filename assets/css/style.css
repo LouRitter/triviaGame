@@ -1,0 +1,67 @@
+.container{
+	background-color:#FFFFFF;
+	border-radius: 7px; 
+	margin-top: 40px;
+}
+
+.container h1{
+	font-family: 'Fugaz One', cursive;
+}
+.container p{
+	font-family: 'Fugaz One', cursive;
+}
+
+#question {
+	font-size: 18px;
+	text-align: center;
+	padding-top: 80px;
+}
+#answers{
+	text-align: center;
+	padding-bottom: 50px; 
+	font-size: 18px;
+}
+#timer{
+	right: 50px;
+}
+.panel-body{
+	border-radius: 10px;
+	border:solid;
+	border-color: #DDDDDD;
+	width: 230px;
+	font-size: 16px;
+
+}
+
+.start h1{
+	font-family: 'Fugaz One', cursive;
+	text-align: center;
+	font-size: 48px;
+
+}
+.start p{
+	font-family: 'Fugaz One', cursive;
+	text-align: center;
+	font-size: 18px;
+}
+.start{
+	height: 500px;
+}
+#nextButton{
+	text-align: center;
+	margin-left: 460px;
+}
+.start img{
+	width: 600px;
+	height:200px;
+	margin-left: 260px;
+	margin-bottom: 15px;
+}
+
+.breakPage{
+	padding: 20px;
+}
+ li:hover{
+	font-weight: bolder;
+	color: #8080ff;
+}
