@@ -65,3 +65,13 @@
 	font-weight: bolder;
 	color: #8080ff;
 }
+.panel{
+	width:300px;
+	font-size: 20px;
+}
+#right{
+	padding: 15px;
+}
+#wrong{
+	padding-left: 15px;
+}

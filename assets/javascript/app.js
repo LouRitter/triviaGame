@@ -79,15 +79,19 @@ function checkGame(){
 var timer = 20;
     function countdown(){
       counter = setInterval(increment, 1000);
+              console.log("in countdown");
+        timer=20;
+
     }
     function increment(){
-      var timer = timer - 1;
+      timer = timer - 1;
       $("#timer").html(timer);
       if (timer === 0){
         stop();
         alert('Time Up!')
         wrong++;
       }
+      console.log(timer);
     }
 
     function stop(){
