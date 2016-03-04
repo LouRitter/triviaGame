@@ -71,7 +71,28 @@
 }
 #right{
 	padding: 15px;
+
 }
 #wrong{
-	padding-left: 15px;
+	padding: 15px;
+}
+.gif{
+	float: right;
+	margin-right: 200px;
+	padding-bottom: 30px;
+}
+.qanda{
+	float: left;
+	margin-top: 20px;
+	padding-bottom: 70px;
+	margin-left: 20px;
+}
+.rightside{
+	float: left;
+	margin-left: 20px;
+}
+.endPage #endGif{
+	float: right;
+	margin-right: 200px;
+	padding-bottom: 30px;
 }

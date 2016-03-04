@@ -16,29 +16,31 @@
 			<button id ="nextButton">Start The Quiz</button>
 		</div>
 		<div class="questionPage">
+		<div class="rightside">
 		<h1>Beer Trivia</h1>
 		<p>Find out how much you know about beer.</p>
 
 		<div class="panel-body">Time Remaining: <h3 id="timer"></h3></div>
-		
-		<div>
-			<p id="question">Who was the diddly beep of the doodly boop?</p>
 		</div>
+		<div class="qanda">
+			<p id="question">Who was the diddly beep of the doodly boop?</p>
+		
 		<br>
 		<div id="answers">
 			<ul>
-			<li><span><img src="assets/images/beermug.png" width="20px" height="20px"></span><p id="answer0">Answer 1</p></li>
+			<li><p id="answer0"><span><img src="assets/images/beermug.png" width="20px" height="20px"></span></p></li>
 			<br>
-			<li><span><img src="assets/images/beermug.png"width="20px" height="20px"></span><p id="answer1">Answer 2</p></li>
+			<li><p id="answer1"><span><img src="assets/images/beermug.png"width="20px" height="20px"></span></p></li>
 			<br>
-			<li><span><img src="assets/images/beermug.png"width="20px" height="20px"></span><p id="answer2">Answer 3</p></li>
+			<li><p id="answer2"><span><img src="assets/images/beermug.png"width="20px" height="20px"></span></p></li>
 			<br>
-			<li><span><img src="assets/images/beermug.png"width="20px" height="20px"></span><p id="answer3">Answer 4</p></li>
+			<li><p id="answer3"><span><img src="assets/images/beermug.png"width="20px" height="20px"></span></p></li>
 			</ul>
+		</div>
 		</div>
 	</div>
 	<div class="breakPage">
-		<img src="assets/images/duff.gif" width="300px" height="200px">
+		<div class="gif"></div>
 		<div class="panel panel-default">
   			<div class="panel-heading"># Right</div>
   			<p id="right"></p>
@@ -61,7 +63,9 @@
 		</div>
 	<div class="endPage">
 		<h1>Your Results</h1>
-		<img src="assets/images/stone.gif"width:"300px"height:"200px";>
+		<div id="endGif">
+		<img src="assets/images/stone.gif"width:"350px"height:"500px";>
+		</div>
 		<h3>Right:</h3><h3 id="amountright"></h3>
 		<h3>Wrong:</h3><h3 id="amountwrong"></h3>
 

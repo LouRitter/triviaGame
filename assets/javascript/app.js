@@ -5,46 +5,66 @@ var questionNum='' ;
 var question0={
     question:'What was the number one beer sold in the United States before Prohibition?',
     answers:['Budweiser','Guinness','Coors','Becks'],
+    gif:'<img src="assets/images/becks.gif"width="500px" height="350px">',
 }
 var question1={
     question:'Approximately how many people are drunk right now?',
     answers:['50 million','10 million','200,000','Just Me'],
+    gif:'<img src="assets/images/frank.gif"width="500px" height="350px">',
 }
 var question2={
     question:'Cenosillicaphobia is the fear of what?',
     answers:['A bad beer','An empty beer glass','Falling pianos','Blacking out'],
+    gif:'<img src="assets/images/chug.gif"width="500px" height="350px">',
+
 }
 var question3={
     question:'When was beer first thought to be consumed?',
     answers:['1487','2AD','1000BC','9500BC'],
+    gif:'<img src="assets/images/old.gif"width="500px" height="350px">',
+
+
 }
 var question4={
     question:'What was the length of prohibition?',
     answers:['approx. 23 years','approx. 14 years','approx. 7 years','18 days'],
+    gif:'<img src="assets/images/prohibition.gif"width="500px" height="350px">',
 }
 var question5={
     question:'Who said the quote "Good people drink good beer"?',
     answers:['Hunter S. Thompson','Franklin D. Roosevelt','Homer Simpson','Stone Cold Steve Austin'],
+    gif:'<img src="assets/images/hunter.gif"width="500px" height="350px">',
+
 }
 var question6={
     question:'In what Pennsylvania town is Yuengling brewed',
     answers:['Pottsville','Philadelphia','Drinkston','East Hillward'],
+    gif:'<img src="assets/images/yueng.gif"width="500px" height="350px">',
+
 }
 var question7={
     question:'Which state, per capita, has the most breweries',
     answers:['Colorado','California','Vermont','New Jersey'],
+    gif:'<img src="assets/images/bern.gif"width="500px" height="350px">',
+
 }
 var question8={
     question:'What is the most popular style of beer in the U.S.A',
     answers:['stout','pilsner','I.P.A.','lager'],
+    gif:'<img src="assets/images/ipa.gif"width="500px" height="350px">',
+
 }
 var question9={
     question:'What is the average calorie count of a pumpkin beer?',
     answers:['140 calories','240 calories','300 calories','150 calories'],
+    gif:'<img src="assets/images/pump.gif"width="500px" height="350px">',
+
 }
 var question10={
     question:'Who was the first president to brew beer in the White House?',
     answers:['Ronald Reagan','Andrew Jackson','George Washington','Barack Obama'],
+    gif:'<img src="assets/images/obama.gif"width="500px" height="350px">',
+
 }
 var rightWrong=false;
 
@@ -88,8 +108,12 @@ var timer = 20;
       $("#timer").html(timer);
       if (timer === 0){
         stop();
-        alert('Time Up!')
         wrong++;
+        $("#right").html(right);
+        $("#wrong").html(wrong);
+        $('.questionPage').hide();
+        $('.breakPage').show();
+        alert('Time Up!')
       }
       console.log(timer);
     }
@@ -97,28 +121,6 @@ var timer = 20;
     function stop(){
       clearInterval(counter);
     }
-
-// function countdown() {
-//     var timer = 90, seconds;
-//     setInterval(function () {
-//         seconds = parseInt(timer % 60, 10);
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//         $("#timer").html(timer);
-
-//         if (--timer === -1) {
-//             alert("Times Up!");
-//         }
-//     }, 1000);
-// function stopFunction() {
-//     clearInterval(timer);
-// };
-
-// };
-
-
-
- 
 
 //-----------------------------------------------------------------------
 
@@ -143,14 +145,16 @@ $("#nextButton").click(function(){
     questionNum=0;
     $(".start").hide();
     $("#question").html(question0.question);
+    $(".gif").html(question0.gif);
     for (var x = 0; x <= 3; x++) {    
-     $("#answer"+x).html(question0.answers[x]);
+    $("#answer"+x).html(question0.answers[x]);
 };
     $(".questionPage").show();
     countdown();
 });
 $("#questionButton1").click(function(){
     $(".breakPage").hide();
+     $(".gif").html(question1.gif);
     rightWrong=false;
     questionNum=1;
     $("#question").html(question1.question);
@@ -164,6 +168,7 @@ $("#questionButton1").click(function(){
 });
 $("#questionButton2").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question2.gif);
     rightWrong=false;
     questionNum=2;
     $("#question").html(question2.question);
@@ -177,6 +182,7 @@ $("#questionButton2").click(function(){
 });
 $("#questionButton3").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question3.gif);
     rightWrong=false;
     questionNum=3;
     $("#question").html(question3.question);
@@ -190,6 +196,7 @@ $("#questionButton3").click(function(){
 });
 $("#questionButton4").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question4.gif);
     rightWrong=false;
     questionNum=4;
     $("#question").html(question4.question);
@@ -203,6 +210,7 @@ $("#questionButton4").click(function(){
 });
 $("#questionButton5").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question5.gif);
     rightWrong=false;
     questionNum=5;
     $("#question").html(question5.question);
@@ -216,6 +224,7 @@ $("#questionButton5").click(function(){
 });
 $("#questionButton6").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question6.gif);
     rightWrong=false;
     questionNum=6;
     $("#question").html(question6.question);
@@ -229,6 +238,7 @@ $("#questionButton6").click(function(){
 });
 $("#questionButton7").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question7.gif);
     rightWrong=false;
     questionNum=7;
     $("#question").html(question7.question);
@@ -242,6 +252,7 @@ $("#questionButton7").click(function(){
 });
 $("#questionButton8").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question8.gif);
     rightWrong=false;
     questionNum=8;
     $("#question").html(question8.question);
@@ -255,6 +266,7 @@ $("#questionButton8").click(function(){
 });
 $("#questionButton9").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question9.gif);
     rightWrong=false;
     questionNum=9;
     $("#question").html(question9.question);
@@ -268,6 +280,7 @@ $("#questionButton9").click(function(){
 });
 $("#questionButton10").click(function(){
     $(".breakPage").hide();
+    $(".gif").html(question10.gif);
     rightWrong=false;
     questionNum=10;
     $("#question").html(question10.question);
