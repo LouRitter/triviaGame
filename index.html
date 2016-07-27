@@ -4,7 +4,10 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<link href='https://fonts.googleapis.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	</head>
 	<body background='assets/images/beer.jpg'>
@@ -13,7 +16,7 @@
 			<h1>BEER TRIVIA</h1>
 			<p>Find out how much you really know about beer!</p>
 			<img src="assets/images/start.jpg">
-			<button id ="nextButton">Start The Quiz</button>
+			<button id ="nextButton" class="btn btn-warning">Start The Quiz</button>
 		</div>
 		<div class="questionPage">
 		<div class="rightside">
@@ -49,17 +52,18 @@
   			<div class="panel-heading"># Wrong</div>
   			<p id="wrong"></p>
   		</div>
-  		<button id="questionButton1">Next Question</button>
-  		<button id="questionButton2">Next Question</button>
-  		<button id="questionButton3">Next Question</button>
-  		<button id="questionButton4">Next Question</button>
-  		<button id="questionButton5">Next Question</button>
-  		<button id="questionButton6">Next Question</button>
-  		<button id="questionButton7">Next Question</button>
-  		<button id="questionButton8">Next Question</button>
-  		<button id="questionButton9">Next Question</button>
-  		<button id="questionButton10">Next Question</button>
-  		<button id="endButton">Submit</button>
+  		<button id="questionButton1" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton2" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton3" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton4" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton5" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton6" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton7" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton8" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton9" class="btn btn-warning">Next Question</button>
+  		<button id="questionButton10" class="btn btn-warning">Next Question</button>
+  		<button id="endButton" class="btn btn-warning">Submit</button>
+
 		</div>
 	<div class="endPage">
 		<h1>Your Results</h1>
@@ -68,9 +72,15 @@
 		</div>
 		<h3>Right:</h3><h3 id="amountright"></h3>
 		<h3>Wrong:</h3><h3 id="amountwrong"></h3>
-
+		<button id="playAgain" class="btn btn-warning">Play Again</button>
 	</div>
+	<div id="winLoseModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+		<h1></h1>
+    </div>
+  </div>
+</div>
 	</body>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </html>

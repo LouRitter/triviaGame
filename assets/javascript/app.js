@@ -70,12 +70,24 @@ var rightWrong=false;
 
 //------------------------------------------------------------------
 
+ $(function(){
+    $('#winLoseModal').on('show.bs.modal', function(){
+        var myModal = $(this);
+        clearTimeout(myModal.data('hideInterval'));
+        myModal.data('hideInterval', setTimeout(function(){
+            myModal.modal('hide');
+        },700));
+    });
+});
+
 //----------------------Functions-----------------------------------
 function checkGame(){
         
     if (rightWrong===true) {
         right++;
-        alert("correct")
+        $(".modal-content").html("<h1>You Are Correct!</h1>")
+    
+        $("#winLoseModal").modal('show');
         $(".questionPage").hide();
         $(".breakPage").show();
         $("#right").html(right);
@@ -84,7 +96,8 @@ function checkGame(){
         $("#amountwrong").html(wrong);
         
     }else{
-        alert("wrong");
+        $(".modal-content").html("<h1>You Are Wrong!</h1>")
+        $("#winLoseModal").modal('show');
         wrong++
         $(".questionPage").hide();
         $(".breakPage").show();
@@ -93,8 +106,6 @@ function checkGame(){
         $("#amountright").html(right);
         $("#amountwrong").html(wrong);
     }
-
-
 };
 var timer = 20;
     function countdown(){
@@ -295,9 +306,23 @@ $("#questionButton10").click(function(){
 $("#endButton").click(function(){
     $(".breakPage").hide();
     $(".endPage").show();
+    $("#endButton").hide();
 });
 
-
+$("#playAgain").click(function(){
+ questionNum=0;
+ right=0;
+ wrong=0;
+    $(".endPage").hide();
+    $("#question").html(question0.question);
+    $(".gif").html(question0.gif);
+    for (var x = 0; x <= 3; x++) {    
+    $("#answer"+x).html(question0.answers[x]);
+    $('#questionButton1').show();
+};
+    $(".questionPage").show();
+    countdown();
+});
 
  $("#answer0").click(function(){
          if(questionNum==1||questionNum==5||questionNum==6){
