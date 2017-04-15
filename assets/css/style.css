@@ -49,17 +49,18 @@
 }
 #nextButton{
 	text-align: center;
-	margin-left: 460px;
+	margin-left: 40%;
+
+}
+.btn.btn-warning{
+	margin-bottom: 10px;
+	margin-left: 10px;
 }
 .start img{
-	width: 600px;
-	height:200px;
-	margin-left: 260px;
+	width: 55%;
+	height:auto;
+	margin-left: 25%;
 	margin-bottom: 15px;
-}
-
-.breakPage{
-	padding: 20px;
 }
  li:hover{
 	font-weight: bolder;
@@ -78,7 +79,7 @@
 }
 .gif{
 	float: right;
-	margin-right: 200px;
+	margin-right: 5%;
 	padding-bottom: 30px;
 }
 .qanda{
@@ -95,4 +96,44 @@
 	float: right;
 	margin-right: 200px;
 	padding-bottom: 30px;
+}
+ 
+#panels{
+	margin-right:10px;
+	margin-left: 5px;
+	padding-top: 10px;
+}
+@media (max-width: 767px){
+
+#question{
+	padding-top: 0px;
+}
+.gif{
+	width: 65%;
+	margin-left:10px;
+	margin-top: 10px;
+}
+.gif img{
+	width:90%;
+	height:auto;
+}
+.breakPage{
+	height: auto;
+}
+
+#panels{
+	width:25%;
+	float:left;
+	margin-right: 0px;
+
+}
+.panel{
+	width: 100%
+}
+.endPage #endGif{
+	margin-right: 10px;
+}
+#playAgain{
+	float: right;
+}
 }
